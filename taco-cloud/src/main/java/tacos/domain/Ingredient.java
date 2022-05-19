@@ -3,7 +3,7 @@ package tacos.domain;
 public class Ingredient {
 	private final String id;
 	private final String name;
-	private final String type;
+	private final Type type;
 	
 	public static enum Type{
 		WRAP,PROTEIN,VEGGIES,CHEESE,SAUSE;
@@ -17,12 +17,11 @@ public class Ingredient {
 		return name;
 	}
 
-	public String getType() {
+	public Type getType() {
 		return type;
 	}
 
-	public Ingredient(String id, String name, String type) {
-		super();
+	public Ingredient(String id, String name, Type type) {
 		this.id = id;
 		this.name = name;
 		this.type = type;
