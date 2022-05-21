@@ -11,23 +11,4 @@ public class Ingredient {
 	public static enum Type{
 		WRAP,PROTEIN,VEGGIES,CHEESE,SAUSE;
 	}
-
-	public String getId() {
-		return id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public Type getType() {
-		return type;
-	}
-
-	public Ingredient(String id, String name, Type type) {
-		this.id = id;
-		this.name = name;
-		this.type = type;
-	}
-	
 }

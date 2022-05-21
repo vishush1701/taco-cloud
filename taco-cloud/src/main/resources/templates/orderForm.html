@@ -6,6 +6,50 @@
 	  	<link rel="stylesheet" th:href="@{/style.css}"/>
 	  </head>
 	  <body>
-	  
+	  	<form method="POST" th:action="@{/orders}" th:object="${order}">
+			<h1>Order your taco creations !</h1>
+			<img alt="taco" th:src="@{/TacoCloud.png}"/><br/>
+			<a th:href="@{/design}" id="another">design another taco</a>	
+			
+			
+			<h3>Deliver my Taco masterpiece to ...</h3>
+				<label for="name">
+					name:
+				</label>
+				<input type="text" th:field="*{name}"/>
+				<br/>
+				<label for="street">
+					street:
+				</label>
+				<input type="text" th:field="*{street}"/>
+				<br/>
+				<label for="city">
+					city:
+				</label>
+				<input type="text" th:field="*{city}"/>
+				<br/>
+				<label for="state">
+					state:
+				</label>
+				<input type="text" th:field="*{state}"/>
+				<br/>
+				<label for="zip">
+					zip:
+				</label>
+				<input type="text" th:field="*{zip}"/>
+				<br/>
+				
+				<h3>Here's how i will pay..</h3>
+				<label for="ccNumber">Credit card Number #:</label>
+				<input type="text" th:field="*{ccNumber}"/>
+				<br/>
+				<label for="ccExpiration">Expiration:</label>
+				<input type="text" th:field="*{ccExpiration}"/>
+				<br/>
+				<label for="ccCVV">CVV:</label>
+				<input type="text" th:field="*{ccCVV}"/>
+				<br/>
+				<button type="submit">Submit</button>
+	  	</form>
 	  </body>
 </html>
